@@ -1,0 +1,34 @@
+NN Architecture:
+3 layers
+Layer 1: 784 nodes
+Layer 2: 50 nodes
+Layer 3: 10 nodes (0-9) digits
+
+Theta 1: n_hidden_units x (n_input_units + 1) = 50 x 785
+Theta 2: n_output_units x (n_hidden_units + 1) = 10 x 51
+
+
+1. Implement rand_theta *
+2. Implement cost function *
+3. Forward propagate a training example and get delta3 *
+4. compute delta2 *
+5. compute gradients *
+6. minimise theta using fmincg *
+7. save optim theta 
+
+Info:
+hyp == 1 corresponds to 0 !
+y: 10 x m
+
+
+Learnings:
+The cost function for TRAINING net sums over k output hypothesis
+while the C.F for computing cost of the neural net PREDICTION
+does not sum over k because while training the cost for each
+of the classifier's thetas requires to be known to adjust the
+specific parameter. C.F for cost of neural net PREDICTION.
+
+When summing over all elements of a matrix, whether row first or
+column first, does not matter
+
+Don't manually sum when using vectorised implementation !
